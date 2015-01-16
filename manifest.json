@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Viewing",
+  "description": "See when another person is viewing the same post.",
+  "version": "0.0.1",
+  "content_scripts": [
+    {
+      "matches": ["*://wordpress.org/support/topic/*"],
+      "js": ["jquery-1.10.2.min.js", "socket.io.js", "app.js"]
+     
+    }
+  ]
+}
