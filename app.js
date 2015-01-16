@@ -5,6 +5,10 @@
 		socket = io("https://viewing-server.herokuapp.com");
 		var uregex = /me,\s(.*)! View/;
 		var match = uregex.exec($(".login").text());
+		if (!match)
+		{
+			return;
+		}
 		var username=match[1];
 		var page=window.location.pathname;
 		socket.on('connect', function()
