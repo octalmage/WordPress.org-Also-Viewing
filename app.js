@@ -44,7 +44,7 @@
   					{
 						ending="are also viewing this page.";
   					}
-  					if (flag==0)
+  					if (flag==1)
   					{
   						$("#viewing-top").text(userlist + ending);
   					}
