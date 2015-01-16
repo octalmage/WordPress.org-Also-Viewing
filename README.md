@@ -1,6 +1,8 @@
 # WordPress.org Also Viewing
 See when another person is viewing the same post.
 
+![](https://cloudup.com/iQzrBzDw27a+)
+
 ## Installing
 
 * Download latest crx file from [Releases](https://github.com/octalmage/WordPress.org-Also-Viewing/releases).
