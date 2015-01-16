@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Viewing",
+  "name": "WordPress.org Also Viewing",
   "description": "See when another person is viewing the same post.",
   "version": "0.0.1",
   "content_scripts": [
