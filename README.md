@@ -1,4 +1,4 @@
-# WordPress.org-Also-Viewing
+# WordPress.org Also Viewing
 See when another person is viewing the same post.
 
 ## Installing
