@@ -11,3 +11,5 @@ See when another person is viewing the same post.
 * Click "Add" to install!
 
 You can find detailed instructions [here](http://www.howtogeek.com/120743/how-to-install-extensions-from-outside-the-chrome-web-store/).
+
+[Server Code](https://github.com/octalmage/WordPress.org-Also-Viewing-Server).
