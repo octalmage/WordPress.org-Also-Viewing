@@ -22,11 +22,6 @@
   					var userlist=[];
   					var ending="";
   					var flag=0;
-  					if (!$("#viewing-top")[0])
-  					{
-  						$("html").css("margin-top", "30px");
-  						$("body").append('<div id="viewing-top" style="font-size: 14px; color: #fff; line-height: 30px; font-family: Helvetica,sans-serif; background-color: #eb583c; position:fixed; top:0px; left:0px; width:100%; height:30px; text-align: center;"></div>');
-  					}	
   					for (x in data)
   					{
   						if (data[x].username != username)
@@ -46,6 +41,11 @@
   					}
   					if (flag==1)
   					{
+						if (!$("#viewing-top")[0])
+						{
+							$("html").css("margin-top", "30px");
+							$("body").append('<div id="viewing-top" style="font-size: 14px; color: #fff; line-height: 30px; font-family: Helvetica,sans-serif; background-color: #eb583c; position:fixed; top:0px; left:0px; width:100%; height:30px; text-align: center;"></div>');
+						}
   						$("#viewing-top").text(userlist.join(", ") + " " + ending);
   					}
   				}
