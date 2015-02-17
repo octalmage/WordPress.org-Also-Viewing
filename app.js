@@ -1,19 +1,23 @@
-	var socket;
-	var users;
-	$(document).on('ready', function()
+var socket;
+var users;
+$(document).on('ready', function()
+{
+	socket = io("https://viewing-server.herokuapp.com");
+	var uregex = /me,\s(.*)! View/;
+	var match = uregex.exec($(".login").text());
+	if (!match)
 	{
-		socket = io("https://viewing-server.herokuapp.com");
-		var uregex = /me,\s(.*)! View/;
-		var match = uregex.exec($(".login").text());
-		if (!match)
+		return;
+	}
+	var username = match[1];
+	var page = window.location.pathname;
+	socket.on('connect', function()
+	{
+		socket.emit('pageopened',
 		{
-			return;
-		}
-		var username=match[1];
-		var page=window.location.pathname;
-		socket.on('connect', function()
-		{
-			socket.emit('pageopened', {username: username, page: page});
+			username: username,
+			page: page
+		});
 
   			socket.on(page, function (data) 
   			{
