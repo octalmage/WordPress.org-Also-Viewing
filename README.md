@@ -6,12 +6,9 @@ See when another person is viewing the same post.
 ## Installing
 **Google Chrome**
 
-* Download latest crx file from [Releases](https://github.com/octalmage/WordPress.org-Also-Viewing/releases).
-* Open `chrome://extensions/` in Google Chrome. 
-* Drag downloaded crx file to the opened extensions page.
-* Click "Add" to install!
+* [Click here to install from the Chrome Store.](https://chrome.google.com/webstore/detail/wordpressorg-also-viewing/cbgdopdkpdpepjbpdepppehhcikmiajn/)
 
-You can find detailed instructions [here](http://www.howtogeek.com/120743/how-to-install-extensions-from-outside-the-chrome-web-store/).
+Make sure all other versions of the extension are disabled and removed. 
 
 **Firefox (Greasemonkey)**
 
