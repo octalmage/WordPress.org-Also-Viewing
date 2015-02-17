@@ -24,8 +24,9 @@
   					var flag=0;
   					for (x in data)
   					{
-  						if (data[x].username != username)
+  						if (data[x].username != username && typeof data[x].username != "undefined")
   						{
+							//Other users exist!
   							flag=1;
   							userlist.push(data[x].username);
   						}
@@ -35,7 +36,8 @@
 					userlist=userlist.getUnique();
 					
   					$("#viewing-top").text("");
-  					if (data.length==2)
+					
+  					if (userlist.length==1)
   					{
   						ending="is also viewing this page.";
   					}
