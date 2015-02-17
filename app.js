@@ -19,7 +19,7 @@
   			{
   				if (data.length>1)
   				{
-  					var userlist="";
+  					var userlist=[];
   					var ending="";
   					var flag=0;
   					if (!$("#viewing-top")[0])
@@ -32,7 +32,7 @@
   						if (data[x].username != username)
   						{
   							flag=1;
-  							userlist+=data[x].username + " ";
+  							userlist.push(data[x].username);
   						}
   					}
   					$("#viewing-top").text("");
@@ -46,7 +46,7 @@
   					}
   					if (flag==1)
   					{
-  						$("#viewing-top").text(userlist + ending);
+  						$("#viewing-top").text(userlist.join(", ") + " " + ending);
   					}
   				}
   				else
