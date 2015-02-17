@@ -30,6 +30,10 @@
   							userlist.push(data[x].username);
   						}
   					}
+					
+					//Fixes duplicate usernames.
+					userlist=userlist.getUnique();
+					
   					$("#viewing-top").text("");
   					if (data.length==2)
   					{
@@ -58,3 +62,19 @@
   			});
 		});
 	});
+	
+//From: http://stackoverflow.com/a/1961068/2233771	
+Array.prototype.getUnique = function()
+{
+	var u = {}, a = [];
+	for(var i = 0, l = this.length; i < l; ++i)
+	{
+		if(u.hasOwnProperty(this[i])) 
+		{
+			continue;
+		}
+		a.push(this[i]);
+		u[this[i]] = 1;
+	}
+	return a;
+}
