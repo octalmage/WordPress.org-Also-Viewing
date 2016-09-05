@@ -3,7 +3,7 @@ var users;
 $(document).on('ready', function()
 {
 	socket = io("https://viewing-server.herokuapp.com");
-	var uregex = /me,\s(.*)! View/;
+	var uregex = /Howdy, (.*)\n/;
 	var match = uregex.exec($(".login").text());
 	if (!match)
 	{
