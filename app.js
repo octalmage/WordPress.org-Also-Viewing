@@ -53,15 +53,15 @@ $(document).on('ready', function()
 				{
 					if (!$("#viewing-top")[0])
 					{
-						$("html").css("margin-top", "30px");
-						$("body").append('<div id="viewing-top" style="font-size: 14px; color: #fff; line-height: 30px; font-family: Helvetica,sans-serif; background-color: #eb583c; position:fixed; top:0px; left:0px; width:100%; height:30px; text-align: center;"></div>');
+						$("#pagebody").css('margin-top', '50px');
+						$("#headline").append('<div id="viewing-top" style="font-size: 14px; color: #fff; line-height: 30px; font-family: Helvetica,sans-serif; background: #45bbe6; border-bottom: 1px solid #dfdfdf; width:100%; height:30px; text-align: center; color: #ffffff">Jason Stallings is also viewing.</div>');
 					}
 					$("#viewing-top").text(userlist.join(", ") + " " + ending);
 				}
 			}
 			else
 			{
-				$("html").css("margin-top", "0px");
+				$("#pagebody").css('margin-top', '29px');
 				$("#viewing-top").remove();
 			}
 			users = data;
