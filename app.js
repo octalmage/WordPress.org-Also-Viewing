@@ -69,7 +69,7 @@ $(document).on('ready', function()
 	});
 });
 
-//From: http://stackoverflow.com/a/1961068/2233771	
+//From: http://stackoverflow.com/a/1961068/2233771
 Array.prototype.getUnique = function()
 {
 	var u = {},
