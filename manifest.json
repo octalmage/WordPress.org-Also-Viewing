@@ -2,12 +2,12 @@
   "manifest_version": 2,
   "name": "WordPress.org Also Viewing",
   "description": "See when another person is viewing the same post.",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "content_scripts": [
     {
       "matches": ["*://wordpress.org/support/topic/*"],
       "js": ["jquery-1.10.2.min.js", "socket.io.js", "app.js"]
-     
+
     }
   ]
 }
