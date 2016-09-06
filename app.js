@@ -11,6 +11,7 @@ $(document).on('ready', function()
 	}
 	// Build username string. Example: Real Name (username).
 	var username = $('.login a').first().text() + ' (' + $username.text() + ')';
+	var page = window.location.pathname;
 	socket.on('connect', function()
 	{
 		socket.emit('pageopened',
