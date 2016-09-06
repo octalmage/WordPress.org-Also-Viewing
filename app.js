@@ -3,14 +3,14 @@ var users;
 $(document).on('ready', function()
 {
 	socket = io("https://viewing-server.herokuapp.com");
-	var uregex = /Howdy, (.*)\n/;
-	var match = uregex.exec($(".login").text());
-	if (!match)
+	var $username = $('.username');
+	// Bail if we didn't find a username.
+	if (!$username.length)
 	{
 		return;
 	}
-	var username = match[1];
-	var page = window.location.pathname;
+	// Build username string. Example: Real Name (username).
+	var username = $('.login a').first().text() + ' (' + $username.text() + ')';
 	socket.on('connect', function()
 	{
 		socket.emit('pageopened',
